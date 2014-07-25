@@ -8,7 +8,7 @@ support language and timezone of caller.
 Quickstart
 ----------
 
-1. Clone project.
+1. [Download and unzip.](https://github.com/eschabell/bpms-helpdesk-demo/archive/master.zip)
 
 2. Add products to installs directory.
 
