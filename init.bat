@@ -81,6 +81,11 @@ echo.
 xcopy /Y /Q "%SUPPORT_DIR%\standalone.xml" "%SERVER_CONF%"
 echo.
 
+echo - setting up demo projects...
+echo.
+mkdir "%SERVER_BIN%\.niogit\"
+xcopy /Y /Q /S "%SUPPORT_DIR%\bpm-suite-demo-niogit\*" "%SERVER_BIN%\.niogit\"
+
 echo.
 echo You can now start the %PRODUCT% with %SERVER_BIN%\standalone.bat
 echo.
