@@ -8,7 +8,7 @@ support language and timezone of caller.
 Quickstart
 ----------
 
-1. [Download and unzip.](https://github.com/eschabell/bpms-helpdesk-demo/archive/master.zip)
+1. [Download and unzip.](https://github.com/jbossdemocentral/bpms-helpdesk-demo/archive/master.zip)
 
 2. Add products to installs directory.
 
@@ -30,8 +30,10 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
+- v0.1 - moved to JBoss Demo Central.
+
 - v0.1 - JBoss BPM SUite 6.0.3 installer with demo installed.
 
 
-![Call Assignment](https://github.com/eschabell/bpms-helpdesk-demo/blob/master/docs/demo-images/call-assignment.png?raw=true)
-![BPM Suite](https://github.com/eschabell/bpms-helpdesk-demo/blob/master/docs/demo-images/bpmsuite.png?raw=true)
+![Call Assignment](https://github.com/jbossdemocentral/bpms-helpdesk-demo/blob/master/docs/demo-images/call-assignment.png?raw=true)
+![BPM Suite](https://github.com/jbossdemocentral/bpms-helpdesk-demo/blob/master/docs/demo-images/bpmsuite.png?raw=true)
