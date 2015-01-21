@@ -1,13 +1,13 @@
 JBoss BPM Suite Helpdesk Demo 
 =============================
-
 Demonstration project for helpdesk assignment of initial callers to available helpdesk personel on the basis of qualifications to
 support language and timezone of caller.
 
+There are two options available to you for using this demo; local and Docker.
 
-Quickstart
-----------
 
+Option 1 - Install on your machine
+----------------------------------
 1. [Download and unzip.](https://github.com/jbossdemocentral/bpms-helpdesk-demo/archive/master.zip)
 
 2. Add products to installs directory.
@@ -19,9 +19,8 @@ Quickstart
 5. Enjoy demo!
 
 
-Optional Docker Install
------------------------
-
+Option 2 - Generate docker install
+----------------------------------
 The following steps can be used to configure and run the demo in a docker container
 
 1. [Download and unzip.](https://github.com/jbossdemocentral/bpms-helpdesk-demo/archive/master.zip)
@@ -49,8 +48,7 @@ Additional information can be found in the jbossdemocentral docker [developer re
 
 Supporting Articles
 -------------------
-
-None yet...
+[Jump Start Your Rules, Events, Planning and BPM Today](http://www.schabell.org/2014/12/jump-start-rules-events-planning-bpm-today.html)
 
 
 Released versions
