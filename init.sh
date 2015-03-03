@@ -9,7 +9,7 @@ SERVER_DIR=$JBOSS_HOME/standalone/deployments/
 SERVER_CONF=$JBOSS_HOME/standalone/configuration/
 SERVER_CONF_DV=$JBOSS_HOME_DV/standalone/configuration/
 SERVER_BIN=$JBOSS_HOME/bin
-SERVER_BIN_DV=$JBOSS_HOME/bin
+SERVER_BIN_DV=$JBOSS_HOME_DV/bin
 SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects
@@ -147,8 +147,6 @@ echo "=  In seperate terminal start JBoss DV server:                            
 echo "=                                                                                         =" 
 echo "=    $ $SERVER_BIN_DV/standalone.sh                                        ="
 echo "=                                                                                         =" 
-echo "=                                                                                         =" 
-echo "=  ******** BPM APP LEVERAGES DV DATA SOURCES SCENARIO **********                         ="
 echo "=                                                                                         =" 
 echo "=  Login to business central to build & deploy BRMS rules project at:                     ="
 echo "=                                                                                         =" 
