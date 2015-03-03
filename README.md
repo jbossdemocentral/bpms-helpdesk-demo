@@ -1,9 +1,8 @@
-JBoss BPM Suite Helpdesk Demo 
-=============================
+JBoss BPM Suite & JBoss Data Virtualization Integration Helpdesk Demo 
+=====================================================================
 Demonstration project for helpdesk assignment of initial callers to available helpdesk personel on the basis of qualifications to
-support language and timezone of caller.
-
-There are two options available to you for using this demo; local and Docker.
+support language and timezone of caller. JDV is used to gather all data for available helpdesk employees at the start of the 
+process.
 
 
 Option 1 - Install on your machine
@@ -14,36 +13,21 @@ Option 1 - Install on your machine
 
 3. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges.
 
-4. Login to http://localhost:8080/business-central  (u:erics / p:bpmsuite1!)
+Follow the output instructions to start the JBoss BPM Suite & JBoss DV:
 
-5. Enjoy demo!
+    ```
+     Start JBoss BRMS server:                                                       
+                                                                                       
+     $ ./target/jboss-eap-6.1/bin/standalone.sh -Djboss.socket.binding.port-offset=100 
+                                                                                       
+   In seperate terminal start JBoss DV server:                                         
+                                                                                       
+     $ ./target/jboss-eap-6.1.dv/bin/standalone.sh  
 
+     Login to [http://localhost:8080/business-central](http://localhost:8080/business-central)  (u:erics / p:bpmsuite1!)
 
-Option 2 - Generate docker install
-----------------------------------
-The following steps can be used to configure and run the demo in a docker container
-
-1. [Download and unzip.](https://github.com/jbossdemocentral/bpms-helpdesk-demo/archive/master.zip)
-
-2. Add product installer to installs directory.
-
-3. Copy contents of support/docker directory to the project root.
-
-4. Build demo image.
-
-	```
-	docker build -t jbossdemocentral/bpms-helpdesk-demo .
-	```
-5. Start demo container.
-
-	```
-	docker run --it -p 8080:8080 -p 9990:9990 jbossdemocentral/bpms-helpdesk-demo
-	```
-6. Login to http://<DOCKER_HOST>:8080/business-central (u:erics / p:bpmsuite1!)
-
-7. Enjoy demo!
-
-Additional information can be found in the jbossdemocentral docker [developer repository](https://github.com/jbossdemocentral/docker-developer)
+     DV login:  (u:teiidUser / p:jbossdv1!)
+    ```
 
 
 Supporting Articles
