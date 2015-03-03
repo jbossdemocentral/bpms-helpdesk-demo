@@ -16,17 +16,17 @@ Option 1 - Install on your machine
 Follow the output instructions to start the JBoss BPM Suite & JBoss DV:
 
     ```
-     Start JBoss BRMS server:                                                       
+     Start JBoss BPM Suite server:                                                       
                                                                                        
      $ ./target/jboss-eap-6.1/bin/standalone.sh -Djboss.socket.binding.port-offset=100 
                                                                                        
    In seperate terminal start JBoss DV server:                                         
                                                                                        
-     $ ./target/jboss-eap-6.1.dv/bin/standalone.sh  
+     $ ./target/jboss-eap-6.3/bin/standalone.sh  
 
-     Login to [http://localhost:8080/business-central](http://localhost:8080/business-central)  (u:erics / p:bpmsuite1!)
+     JBoss BPM Suite login to [http://localhost:8080/business-central](http://localhost:8080/business-central)  (u:erics / p:bpmsuite1!)
 
-     DV login:  (u:teiidUser / p:jbossdv1!)
+     JBoss DV login:  (u:teiidUser / p:jbossdv1!)
     ```
 
 
