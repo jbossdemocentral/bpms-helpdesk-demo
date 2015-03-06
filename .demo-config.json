@@ -1,7 +1,7 @@
 {
   "name":"JBoss BPM Suite Helpdesk Demo",
   "summary":"This demo is a simulation of caller sorting for a helpdesk and features BPM with human task integration and a web service. Install options - local and Docker.",
-  "author":"Andrew Block, Eric D. Schabell"
+  "author":"Andrew Block, Eric D. Schabell",
   "categories":["bpms"],
   "level":"Easy Peasy",
   "published":true,
