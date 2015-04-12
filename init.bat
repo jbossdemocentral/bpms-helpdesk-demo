@@ -17,9 +17,9 @@ set SRC_DIR=%PROJECT_HOME%\installs
 set SUPPORT_DIR=%PROJECT_HOME%\support
 set PRJ_DIR=%PROJECT_HOME%\projects
 set BPMS=jboss-bpms-installer-6.0.3.GA-redhat-1.jar
-set DV=jboss-dv-installer-6.1.0.Beta-redhat-1.jar
+set DV=jboss-dv-installer-6.1.0.redhat-3.jar
 set VERSION=6.0.3
-set DV_VERSION=6.1.0.Beta
+set DV_VERSION=6.1.0
 
 REM wipe screen.
 cls
@@ -87,14 +87,12 @@ REM Move DV install aside for BPM Suite.
 move "%JBOSS_HOME%" "%JBOSS_HOME_DV%"
 
 echo.
-echo   - install teiid security files...
-echo.
-xcopy /Y /Q /S "%SUPPORT_DIR%\teiid*" "%SERVER_CONF_DV%"
-
-echo.
 echo   - move data files...
 echo.
-xcopy /Y /Q /S "%SUPPORT_DIR%\teiidfiles\data\*" "%JBOSS_HOME_DV%\standalone\data"
+xcopy /Y /Q /S "%SUPPORT_DIR%\teiidfiles\data\*.sql" "%JBOSS_HOME_DV%\agents\sql"
+xcopy /Y /Q /S "%SUPPORT_DIR%\teiidfiles\data\*.txt" "%JBOSS_HOME_DV%\agents\txt"
+xcopy /Y /Q /S "%SUPPORT_DIR%\teiidfiles\data\agent-status-ds.h2.db" "%JBOSS_HOME_DV%\agents\db"
+xcopy /Y /Q /S "%SUPPORT_DIR%\teiidfiles\AgentsVDB.war" "%JBOSS_HOME_DV%\standalone\deployments"
 
 echo.
 echo   - move virtual database...

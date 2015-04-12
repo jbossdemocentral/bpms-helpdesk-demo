@@ -1,6 +1,6 @@
 #!/bin/sh 
 DEMO="JBoss BPM Suite + JDV Helpdesk Demo"
-AUTHORS="Cojan Ballengooi, Andrew Block, Eric D. Schabell"
+AUTHORS="Cojan Ballengooijen, Andrew Block, Eric D. Schabell"
 PROJECT="git@github.com:jbossdemocentral/bpms-helpdesk-demo.git"
 PRODUCT="JBoss BPM Suite & JBoss DV"
 JBOSS_HOME=./target/jboss-eap-6.1
@@ -14,9 +14,9 @@ SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects
 BPMS=jboss-bpms-installer-6.0.3.GA-redhat-1.jar
-DV=jboss-dv-installer-6.1.0.Beta-redhat-1.jar
+DV=jboss-dv-installer-6.1.0.redhat-3.jar
 VERSION=6.0.3
-DV_VERSION=6.1.0.Beta
+DV_VERSION=6.1.0
 
 # wipe screen.
 clear 
@@ -76,7 +76,7 @@ fi
 # DV installer.
 echo Product installers running now...
 echo
-java -jar $SRC_DIR/$DV $SUPPORT_DIR/installation-dv  -variablefile $SUPPORT_DIR/installation-dv.variables
+java -jar $SRC_DIR/$DV $SUPPORT_DIR/installation-dv  
 echo
 
 if [ $? -ne 0 ]; then
@@ -85,23 +85,25 @@ if [ $? -ne 0 ]; then
 fi
 
 echo
-echo "  - install teiid security files..."
-echo
-cp $SUPPORT_DIR/teiidfiles/teiid* $SERVER_CONF_DV
-
-echo
 echo "  - move data files..."
 echo
-cp -R $SUPPORT_DIR/teiidfiles/data/* $JBOSS_HOME_DV/standalone/data
+mkdir -p $JBOSS_HOME_DV/agents/sql
+mkdir -p $JBOSS_HOME_DV/agents/txt
+mkdir -p $JBOSS_HOME_DV/agents/db
+cp -R $SUPPORT_DIR/teiidfiles/data/*.sql $JBOSS_HOME_DV/agents/sql
+cp -R $SUPPORT_DIR/teiidfiles/data/*.txt $JBOSS_HOME_DV/agents/txt
+cp $SUPPORT_DIR/teiidfiles/data/agent-status-ds.h2.db $JBOSS_HOME_DV/agents/db
+cp $SUPPORT_DIR/teiidfiles/AgentsVDB.war $JBOSS_HOME_DV/standalone/deployments
 
 echo
 echo "  - move virtual database..."
 echo
 cp -R $SUPPORT_DIR/teiidfiles/vdb $JBOSS_HOME_DV/standalone/deployments
 
-echo "  - setting up dv standalone.xml configuration adjustments..."
 echo
-cp $SUPPORT_DIR/teiidfiles/standalone.dv.xml $SERVER_CONF_DV/standalone.xml
+echo "  - setting up standalone.xml configuration adjustments..."
+echo
+cp $SUPPORT_DIR/teiidfiles/standalone.dv.xml $JBOSS_HOME_DV/standalone/configuration/standalone.xml 
 
 # Run BPM installer.
 echo
@@ -129,11 +131,9 @@ echo "  - making sure standalone.sh for server is executable..."
 echo
 chmod u+x $JBOSS_HOME/bin/standalone.sh
 
-# Optional: uncomment this to install mock data for BPM Suite.
+# Optional: uncomment this to install mock data for JBoss Data Virtualization.
 #
-#echo - setting up mock bpm dashboard data...
-#cp $SUPPORT_DIR/1000_jbpm_demo_h2.sql $SERVER_DIR/dashbuilder.war/WEB-INF/etc/sql
-#echo
+#echo - setting up mock dv data...
 
 # Final instructions to user to start and run demo.
 echo

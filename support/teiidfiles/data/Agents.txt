@@ -1,0 +1,11 @@
+id,chatName,region,language1,language2,language3
+1,chat1,EMEA,NL,UK,US
+2,chat2,EMEA,NO,FR,UK
+3,chat3,EMEA,SE,NL,US
+4,chat4,EMEA,SP,US,
+5,chat5,NA,US,,
+6,chat6,NA,US,,
+7,chat7,APAC,JP,,
+8,chat8,APAC,JP,,
+9,chat9,NA,US,,
+10,chat10,NA,US,,
