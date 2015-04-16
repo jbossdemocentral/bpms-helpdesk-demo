@@ -30,10 +30,11 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
-- v0.2 - JBoss BPM SUite 6.1.ER2 installer with demo installed.
+- v0.2 - JBoss BPM SUite 6.1 with helpdesk demo installed.
 
 - v0.1 - JBoss BPM SUite 6.0.3 installer with demo installed.
 
 
 ![Call Assignment](https://github.com/eschabell/bpms-helpdesk-demo/blob/master/docs/demo-images/call-assignment.png?raw=true)
+
 ![BPM Suite](https://github.com/eschabell/bpms-helpdesk-demo/blob/master/docs/demo-images/bpmsuite.png?raw=true)
