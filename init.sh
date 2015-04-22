@@ -1,7 +1,7 @@
 #!/bin/sh 
 DEMO="JBoss BPM Suite Helpdesk Demo"
-AUTHORS="Eric D. Schabell"
-PROJECT="git@github.com:eschabell/bpms-helpdesk-demo.git"
+AUTHORS="Andrew Block, Eric D. Schabell"
+PROJECT="git@github.com:jbossdemocentral/bpms-helpdesk-demo.git"
 PRODUCT="JBoss BPM Suite"
 JBOSS_HOME=./target/jboss-eap-6.4
 SERVER_DIR=$JBOSS_HOME/standalone/deployments/
@@ -31,9 +31,9 @@ echo "##     ####  #     #     #    ###  ##### #####   #   #####     ##"
 echo "##                                                             ##"   
 echo "##                                                             ##"   
 echo "##  brought to you by,                                         ##"   
-echo "##             ${AUTHORS}                                ##"
+echo "##             ${AUTHORS}                  ##"
 echo "##                                                             ##"   
-echo "##  ${PROJECT}            ##"
+echo "##  ${PROJECT}     ##"
 echo "##                                                             ##"   
 echo "#################################################################"
 echo

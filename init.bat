@@ -3,8 +3,8 @@ setlocal
 
 set PROJECT_HOME=%~dp0
 set DEMO=JBoss BPM Suite Helpdesk Demo
-set AUTHORS=Eric D. Schabell
-set PROJECT=git@github.com:eschabell/bpms-helpdesk-demo.git
+set AUTHORS=Andrew Block, Eric D. Schabell
+set PROJECT=git@github.com:jbossdemocentral/bpms-helpdesk-demo.git
 set PRODUCT=JBoss BPM Suite
 set JBOSS_HOME=%PROJECT_HOME%\target\jboss-eap-6.4
 set SERVER_DIR=%JBOSS_HOME%\standalone\deployments\
@@ -23,7 +23,7 @@ cls
 echo.
 echo #################################################################
 echo ##                                                             ##   
-echo ##  Setting up the %DEMO%                               ##
+echo ##  Setting up the %DEMO%               ##
 echo ##                                                             ##   
 echo ##                                                             ##   
 echo ##     ####  ####   #   #      ### #   # ##### ##### #####     ##
@@ -34,9 +34,9 @@ echo ##     ####  #     #     #    ###  ##### #####   #   #####     ##
 echo ##                                                             ##   
 echo ##                                                             ##   
 echo ##  brought to you by,                                         ##   
-echo ##             %AUTHORS%               ##
+echo ##             %AUTHORS%                  ##
 echo ##                                                             ##   
-echo ##  %PROJECT%            ##
+echo ##  %PROJECT%     ##
 echo ##                                                             ##   
 echo #################################################################
 echo.
@@ -85,7 +85,13 @@ if not "%ERRORLEVEL%" == "0" (
 
 echo JBoss BPM Suite installer running now...
 echo.
-java -jar %SRC_DIR%/%BPMS% %SUPPORT_DIR%\installation-bpms -variablefile %SUPPORT_DIR%\installation-bpms.variables
+call java -jar %SRC_DIR%/%BPMS% %SUPPORT_DIR%\installation-bpms -variablefile %SUPPORT_DIR%\installation-bpms.variables
+
+if not "%ERRORLEVEL%" == "0" (
+	echo Error Occurred During %PRODUCT% Installation!
+	echo.
+	GOTO :EOF
+)
 
 echo - enabling demo accounts role setup in application-roles.properties file...
 echo.
