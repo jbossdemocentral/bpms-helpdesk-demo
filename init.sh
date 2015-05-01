@@ -93,7 +93,7 @@ mkdir -p $JBOSS_HOME_DV/agents/db
 cp -R $SUPPORT_DIR/teiidfiles/data/*.sql $JBOSS_HOME_DV/agents/sql
 cp -R $SUPPORT_DIR/teiidfiles/data/*.txt $JBOSS_HOME_DV/agents/txt
 cp $SUPPORT_DIR/teiidfiles/data/agent-status-ds.h2.db $JBOSS_HOME_DV/agents/db
-cp $SUPPORT_DIR/teiidfiles/AgentsVDB.war $JBOSS_HOME_DV/standalone/deployments
+cp $SUPPORT_DIR/teiidfiles/AgentsWS.war $JBOSS_HOME_DV/standalone/deployments
 
 echo
 echo "  - move virtual database..."
