@@ -205,12 +205,12 @@
                     </security>
                 </datasource>
                 <datasource jndi-name="java:/AgentsVDB" pool-name="AgentsVDB" enabled="true">
-                    <connection-url>jdbc:teiid:AgentsVDB;PassthroughAuthentication=true</connection-url>
+                    <connection-url>jdbc:teiid:AgentsVDB</connection-url>
                     <driver>teiid</driver>
                     <security>
                         <user-name>teiidUser</user-name>
                         <password>jbossdv1!</password>
-                    </security>
+	                </security>
                 </datasource>
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">
