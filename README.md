@@ -3,7 +3,7 @@ JBoss BPM Suite Helpdesk Demo
 Demonstration project for helpdesk assignment of initial callers to available helpdesk personel on the basis of qualifications to
 support language and timezone of caller.
 
-There are two options available to you for using this demo; local and Docker.
+There are two options available to you for using this demo; local and containerized.
 
 
 Option 1 - Install on your machine
@@ -19,9 +19,9 @@ Option 1 - Install on your machine
 5. Enjoy demo!
 
 
-Option 2 - Generate docker install
-----------------------------------
-The following steps can be used to configure and run the demo in a docker container
+Option 2 - Generate containerized installation
+----------------------------------------------
+The following steps can be used to configure and run the demo in a container
 
 1. [Download and unzip.](https://github.com/jbossdemocentral/bpms-helpdesk-demo/archive/master.zip)
 
@@ -60,7 +60,7 @@ See the tagged releases for the following versions of the product:
 
 - v0.4 - JBoss BPM SUite 6.1 with helpdesk demo installed.
 
-- v0.3 - JBoss BPM Suite 6.0.3 with optional docker installation.
+- v0.3 - JBoss BPM Suite 6.0.3 with optional containerized installation.
 
 - v0.2 - moved to JBoss Demo Central with updated windows init.bat support.
 
