@@ -60,7 +60,7 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
-- v0.5 - JBoss BPM Suite 6.2, JBoss EAP 6.4.3 and helpdesk demo installed.
+- v0.5 - JBoss BPM Suite 6.2, JBoss EAP 6.4.4 and helpdesk demo installed.
 
 - v0.4 - JBoss BPM Suite 6.1 with helpdesk demo installed.
 
